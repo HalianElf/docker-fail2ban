@@ -30,11 +30,17 @@ RUN apk --update --no-cache add \
     tzdata \
     wget \
     whois \
+    gcc \
+    musl-dev \
+    libffi-dev \
+    openssl-dev \
+    make \
   && cd /tmp \
   && curl -SsOL https://github.com/fail2ban/fail2ban/archive/${FAIL2BAN_VERSION}.zip \
   && unzip ${FAIL2BAN_VERSION}.zip \
   && cd fail2ban-${FAIL2BAN_VERSION} \
   && python setup.py install \
+  && pip3 install netmiko \
   && rm -rf /etc/fail2ban/jail.d /var/cache/apk/* /tmp/*
 
 COPY entrypoint.sh /entrypoint.sh
