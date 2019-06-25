@@ -4,15 +4,15 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
 
-LABEL maintainer="CrazyMax" \
+LABEL maintainer="HalianElf" \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.name="fail2ban" \
   org.label-schema.description="Fail2ban" \
   org.label-schema.version=$VERSION \
-  org.label-schema.url="https://github.com/crazy-max/docker-fail2ban" \
+  org.label-schema.url="https://github.com/HalianElf/docker-fail2ban" \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/crazy-max/docker-fail2ban" \
-  org.label-schema.vendor="CrazyMax" \
+  org.label-schema.vcs-url="https://github.com/HalianElf/docker-fail2ban" \
+  org.label-schema.vendor="HalianElf" \
   org.label-schema.schema-version="1.0"
 
 ARG FAIL2BAN_VERSION=0.10.4
